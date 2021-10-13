@@ -1,0 +1,59 @@
+{
+	"apiVersion": 2,
+	"name": "mtheory/card",
+	"version": "0.1.0",
+	"title": "Card",
+	"category": "widgets",
+	"icon": "block-default",
+	"description": "Display content in a card",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "card",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "text",
+			"selector": ".title"
+		},
+		"titleTag": {
+			"enum": ["h2","h3","h4","h5","h6"],
+			"default": "h2"
+		},
+		"titleClass": {
+			"enum": ["h2","h3","h4","h5","h6"],
+			"default": "h3"
+		},
+		"excerpt": {
+			"type": "string",
+			"source": "text",
+			"selector": ".excerpt"
+		},
+		"buttonText": {
+			"type": "string",
+			"source": "text",
+			"selector": ".card-button",
+			"default": "Read"
+		},
+		"linkUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"imageObj": {
+			"type": "object",
+			"default": null
+		},
+		"authorImageObj": {
+			"type": "object",
+			"default": null
+		},
+		"author": {
+			"type": "string",
+			"source": "text",
+			"selector": ".author"
+		}
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
