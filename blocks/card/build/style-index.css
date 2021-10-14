@@ -12,6 +12,20 @@
   border-radius: 0.5em;
   overflow: hidden;
   box-shadow: 0 0.5em 1.5em rgba(0, 0, 0, 0.1);
+  display: block;
+  text-decoration: none;
+}
+.wp-block-mtheory-card .card-media {
+  overflow: hidden;
+  display: inline-block;
+}
+.wp-block-mtheory-card .image {
+  margin-bottom: 0 !important;
+  vertical-align: middle;
+  transition: all 1.5s ease;
+}
+.wp-block-mtheory-card:hover .image {
+  transform: scale(1.07, 1.07);
 }
 .wp-block-mtheory-card .card-content {
   padding: 1em;
@@ -110,9 +124,11 @@
   padding: 0.5em 1em;
   text-transform: uppercase;
   font-weight: 700;
-  color: #0a0a0a !important;
-  position: relative;
   background-color: transparent !important;
+  position: relative;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  color: #0a0a0a !important;
 }
 @media screen and (min-width: 481px) {
   .wp-block-mtheory-card .card-footer .card-button {
@@ -153,6 +169,7 @@
   transition: all 0.2s ease;
   width: 2em;
   height: 2em;
+  margin-bottom: 0 !important;
   border-radius: 50%;
   margin-right: 0.5em;
 }

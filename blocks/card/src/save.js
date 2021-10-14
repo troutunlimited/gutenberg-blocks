@@ -38,13 +38,15 @@ export default function save({attributes}) {
 
   const TitleTag = titleTag;
 
-  return ([
-    <div { ...useBlockProps.save() }>
+  const card = (
+    <>
       {
         imageObj !== null &&
-        <img className={ `wp-image-${imageObj.id}` }
-          src={ imageObj.sizes.md_3x2.url }
-          />
+        <div class="card-media">
+          <img className={ `image wp-image-${imageObj.id}` }
+            src={ imageObj.sizes.md_3x2.url }
+            />
+        </div>
       }
       <div class="card-content">
         <TitleTag className={`title ${titleClass}`}>{title}</TitleTag>
@@ -58,14 +60,32 @@ export default function save({attributes}) {
               src={ authorImageObj.sizes.thumbnail.url }
               />
           }
-          <p class="author">{author}</p>
+          <span class="author">{author}</span>
         </div>
         <button class="card-button">
           {buttonText}
         </button>
       </div>
-    </div>
-  ])
+    </>
+  )
+
+
+  return (
+    <>
+      {
+        linkUrl !== '' &&
+        <a href={linkUrl} { ...useBlockProps.save() }>
+          {card}
+        </a>
+      }
+      {
+        linkUrl == '' &&
+        <div { ...useBlockProps.save() }>
+          {card}
+        </div>
+      }
+    </>
+  )
 
 
 

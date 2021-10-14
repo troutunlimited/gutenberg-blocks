@@ -6,4 +6,12 @@
 
 .wp-block-mtheory-card {
 	border: 1px solid #ddd;
+	.card-image-button-container {
+		background-color: #efefef;
+		text-align: center;
+		padding: 6em 1em;
+	}
+	.author-button-container {
+		margin-right: .5em;
+	}
 }

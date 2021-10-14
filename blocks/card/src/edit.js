@@ -96,16 +96,18 @@ export default function Edit( {attributes, setAttributes}   ) {
   const getImageButton = (open) => {
     if(imageObj) {
       return (
-        <img
-          src={ imageObj.sizes.md_3x2.url }
-          onClick={ open }
-          className={`image wp-image-${imageObj.id}`}
-          />
+        <div class="card-media">
+          <img
+            src={ imageObj.sizes.md_3x2.url }
+            onClick={ open }
+            className={`image wp-image-${imageObj.id}`}
+            />
+        </div>
       );
     }
     else {
       return (
-        <div className="button-container">
+        <div className="card-image-button-container button-container">
           <Button
             onClick={ open }
             className="button button-large"
@@ -129,7 +131,7 @@ export default function Edit( {attributes, setAttributes}   ) {
     }
     else {
       return (
-        <div className="button-container">
+        <div className="author-button-container button-container">
           <Button
             onClick={ open }
             className="button button-small"
@@ -185,7 +187,7 @@ export default function Edit( {attributes, setAttributes}   ) {
           <RichText
             key="editable"
             value={author}
-            tagName='p'
+            tagName='span'
             className='author'
             placeholder="Author name"
             allowedFormats={[]}
