@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Medium Theory Gutenberg Blocks
+ * Plugin Name: Trout Unlimited Gutenberg Blocks
  * Plugin URI: https://github.com/justinmckee/medium-theory-gutenberg-blocks
  * Version: 1.0.1
  * Author: Justin McKee <thisisjustinmckee@gmail.com>
