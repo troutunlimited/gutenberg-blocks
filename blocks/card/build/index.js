@@ -135,7 +135,7 @@ function Edit({
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
         class: "card-media"
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-        src: imageObj.sizes.md_3x2.url,
+        src: imageObj.sizes.full.url,
         onClick: open,
         className: `image wp-image-${imageObj.id}`
       }));
@@ -404,7 +404,7 @@ function save({
     class: "card-media"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("img", {
     className: `image wp-image-${imageObj.id}`,
-    src: imageObj.sizes.md_3x2.url
+    src: imageObj.sizes.full.url
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
     class: "card-content"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(TitleTag, {

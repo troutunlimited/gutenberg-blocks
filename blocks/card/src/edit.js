@@ -98,7 +98,7 @@ export default function Edit( {attributes, setAttributes}   ) {
       return (
         <div class="card-media">
           <img
-            src={ imageObj.sizes.md_3x2.url }
+            src={ imageObj.sizes.full.url }
             onClick={ open }
             className={`image wp-image-${imageObj.id}`}
             />
