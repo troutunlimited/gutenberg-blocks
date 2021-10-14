@@ -18,11 +18,14 @@
 .wp-block-mtheory-card .card-media {
   overflow: hidden;
   display: inline-block;
+  width: 100%;
 }
 .wp-block-mtheory-card .image {
   margin-bottom: 0 !important;
   vertical-align: middle;
   transition: all 1.5s ease;
+  width: 100%;
+  height: auto;
 }
 .wp-block-mtheory-card:hover .image {
   transform: scale(1.07, 1.07);

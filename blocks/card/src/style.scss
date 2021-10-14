@@ -15,11 +15,14 @@
 	.card-media {
 		overflow: hidden;
 		display: inline-block;
+		width: 100%;
 	}
 	.image {
 		margin-bottom: 0 !important;
 		vertical-align: middle;
 		transition: all 1.5s ease;
+		width: 100%;
+		height: auto;
 	}
 	&:hover {
 		.image {
