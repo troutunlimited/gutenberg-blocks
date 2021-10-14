@@ -118,9 +118,17 @@ function Edit({
     buttonText: value
   });
 
-  const updateImage = media => setAttributes({
-    imageObj: media
-  });
+  const updateImage = media => {
+    if (media.height < 853 || media.width < 1280) {
+      return false;
+    }
+
+    setAttributes({
+      imageObj: media
+    });
+  };
+
+  const checkImageSize = media => {};
 
   const updateAuthor = value => setAttributes({
     author: value
@@ -135,7 +143,7 @@ function Edit({
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
         class: "card-media"
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-        src: imageObj.sizes.full.url,
+        src: imageObj.sizes.md_3x2.url,
         onClick: open,
         className: `image wp-image-${imageObj.id}`
       }));
@@ -404,7 +412,7 @@ function save({
     class: "card-media"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("img", {
     className: `image wp-image-${imageObj.id}`,
-    src: imageObj.sizes.full.url
+    src: imageObj.sizes.md_3x2.url
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
     class: "card-content"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(TitleTag, {

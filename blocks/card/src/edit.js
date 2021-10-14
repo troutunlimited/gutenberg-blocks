@@ -29,7 +29,8 @@ import {
   Panel,
   PanelBody,
   PanelRow,
-  Button
+  Button,
+  Notice
 } from "@wordpress/components";
 
 /**
@@ -87,7 +88,18 @@ export default function Edit( {attributes, setAttributes}   ) {
 
   const updateButtonText = value => setAttributes({ buttonText: value });
 
-  const updateImage = media => setAttributes({ imageObj: media });
+  const updateImage = media => {
+    if(media.height < 853 || media.width < 1280){
+      return false;
+    }
+
+    setAttributes({ imageObj: media });
+
+  }
+
+  const checkImageSize = media => {
+
+  }
 
   const updateAuthor = value => setAttributes({ author: value });
 
@@ -98,7 +110,7 @@ export default function Edit( {attributes, setAttributes}   ) {
       return (
         <div class="card-media">
           <img
-            src={ imageObj.sizes.full.url }
+            src={ imageObj.sizes.md_3x2.url }
             onClick={ open }
             className={`image wp-image-${imageObj.id}`}
             />
