@@ -106,7 +106,7 @@ export default function Edit( {attributes, setAttributes}   ) {
   const updateAuthorImage = media => setAttributes({ authorImageObj: media });
 
   const getImageButton = (open) => {
-    if(imageObj) {
+    if(imageObj.sizes.md_3x2 !== null) {
       return (
         <div class="card-media">
           <img

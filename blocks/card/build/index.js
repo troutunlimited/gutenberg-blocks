@@ -139,7 +139,7 @@ function Edit({
   });
 
   const getImageButton = open => {
-    if (imageObj) {
+    if (imageObj.sizes.md_3x2 !== null) {
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
         class: "card-media"
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
@@ -408,7 +408,7 @@ function save({
     authorImageObj
   } = attributes;
   const TitleTag = titleTag;
-  const card = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, imageObj !== null && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
+  const card = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, imageObj.sizes.md_3x2 !== null && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
     class: "card-media"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("img", {
     className: `image wp-image-${imageObj.id}`,
