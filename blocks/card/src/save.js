@@ -41,7 +41,7 @@ export default function save({attributes}) {
   const card = (
     <>
       {
-        imageObj !== null &&
+        imageObj.sizes.md_3x2 !== null &&
         <div class="card-media">
           <img className={ `image wp-image-${imageObj.id}` }
             src={ imageObj.sizes.md_3x2.url }
